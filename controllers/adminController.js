@@ -39,7 +39,7 @@ exports.login = async (req, res) => {
 
                 const token = jwt.sign({
 
-                }, process.env.JWT_SECRET, { expiresIn: 60 * 60 });
+                }, XYZ123456, { expiresIn: 60 * 60 });
 
                 res.json({ status: 200, success: true, message: "Admin logged in Successfully", token: token })
             }

@@ -11,7 +11,7 @@ module.exports = async (req, res, next) => {
             })
         }
         else {
-            jwt.verify(token, process.env.JWT_SECRET, function (err, decoded) {
+            jwt.verify(token, XYZ123456, function (err, decoded) {
                 if (err) {
                     res.json({
                         status: 401,

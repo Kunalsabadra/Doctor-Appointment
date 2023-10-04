@@ -10,7 +10,7 @@ const router = express.Router();
 router.post('/login', login);
 
 //Get all users
-// router.get('/getAllUsers', authMiddleware, getAllUsersController);
+router.get('/getAllUsers', authMiddleware, getAllUsersController);
 
 //Get all doctors
 router.get('/getDoctors', authMiddleware, doctorView)

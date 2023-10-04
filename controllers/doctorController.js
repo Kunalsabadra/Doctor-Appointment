@@ -31,7 +31,7 @@ exports.doctorRegister = async (req, res) => {
 
                 const savedoctor = await doctorObj.save();
 
-                const token = jwt.sign({ user_id: savedoctor._id }, `${process.env.JWT_SECRET}`, { expiresIn: "2h" });
+                const token = jwt.sign({ user_id: savedoctor._id }, `${XYZ123456}`, { expiresIn: "2h" });
                 res.json({ status: 200, success: true, message: "Doctor Registered Successfully", data: token });
             }
         }
@@ -60,7 +60,7 @@ exports.doctorLogin = async (req, res) => {
 
                 const token = jwt.sign(
                     { user_id: doesDoctorExist._id },
-                    `${process.env.JWT_SECRET_KEY}`,
+                    `${XYZ123456}`,
                     {
                         expiresIn: "2h",
                     }
